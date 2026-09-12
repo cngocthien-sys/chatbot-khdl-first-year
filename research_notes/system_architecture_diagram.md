@@ -12,3 +12,13 @@ flowchart LR
     F --> G[Vector Database]
 
     G --> H[(Vector + Metadata)]
+## 2. Giai đoạn hỏi đáp
+
+```mermaid
+flowchart LR
+    A[User Question] --> B[Query Embedding]
+    B --> C[Retriever]
+    C --> D[Top-k Relevant Chunks]
+    D --> E[Prompt + Context]
+    E --> F[LLM]
+    F --> G[Answer + Citation]
